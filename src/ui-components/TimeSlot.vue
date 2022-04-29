@@ -19,11 +19,11 @@ const [handleTimeSlotClick] = useBooking();
   <button
       type="button"
       :class="
-      `${styles['time-slot']} ${selected ? styles['time-slot-selected'] : ''}
-      ${timeSlot === undefined ? styles['time-slot-empty'] : ''}
+      `${'time-slot'} ${selected ? 'time-slot-selected' : ''}
+      ${timeSlot === undefined ? 'time-slot-empty' : ''}
       `"
       @click="handleTimeSlotClick(indices)"
-      disabled="disabled"
+      :disabled="disabled"
     >
         <div v-if="timeSlot">
           <span v-if="label !== undefined">{{label}}</span>
