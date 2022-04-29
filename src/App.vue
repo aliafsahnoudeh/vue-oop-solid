@@ -14,6 +14,6 @@ provide("logical-components", logicalComponents)
   <Main />
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "./assets/styles/index.scss";
 </style>

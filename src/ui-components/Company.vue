@@ -3,10 +3,11 @@ import CompanyModel from "../types/CompanyModel";
 import CompanyLabel from "./CompanyLabel.vue";
 import CardLayout from "./CardLayout.vue";
 import TimeSlot from "./TimeSlot.vue";
+import GroupList from "./GroupList.vue";
 
 defineProps<{
   company: CompanyModel;
-  index: number | undefined;
+  index: number;
 }>()
 
 </script>
@@ -23,9 +24,9 @@ defineProps<{
           :label="company.selectedTimeSlot !== undefined ? company.selectedTimeSlot.label : undefined"
         />
       </CardLayout>
-      <!-- <GroupList
-        groups={company.groups}
-        companyIndex={index}
-      /> -->
+      <GroupList
+        :groups="company.groups"
+        :companyIndex="index"
+      />
     </div>
 </template>

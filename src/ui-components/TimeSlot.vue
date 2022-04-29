@@ -26,11 +26,13 @@ const [handleTimeSlotClick] = useBooking();
       :disabled="disabled"
     >
         <div v-if="timeSlot">
-          <span v-if="label !== undefined">{{label}}</span>
-          {' at '}
-          <span class="time-slot-start">{{timeSlot.start}}</span>
-          {' - '}
-          <span class="time-slot-end">{{timeSlot.end}}</span>
+          <template v-if="label !== undefined">
+            <span>{{ label }}</span>
+            at 
+          </template>
+          <span class="time-slot-start">{{ timeSlot.start }}</span>
+           - 
+          <span class="time-slot-end">{{ timeSlot.end }}</span>
         </div>
     </button>
 </template>
