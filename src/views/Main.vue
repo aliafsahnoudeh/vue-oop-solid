@@ -1,18 +1,20 @@
 <script setup lang="ts">
 import Layout from "../ui-components/Layout.vue"
+import Company from "../ui-components/Company.vue"
 import useCompanies from "../logical-components/useCompanies"
-
-const { loading, companies } = useCompanies();
+import useStore from "../store"
+const store = useStore();
+const { loading } = useCompanies();
 
 </script>
 
 <template>
   <Layout>
       <div v-if="loading" class="message"> loading </div>
-      <template v-else-if="companies && companies.length > 0">
+      <template v-else-if="store.companies && store.companies.length > 0">
           <div class="main">
               <Company 
-              v-for="(company, index) in companies"
+              v-for="(company, index) in store.companies"
               :company="company" :index="index" :key="company.id" />
           </div>
       </template>

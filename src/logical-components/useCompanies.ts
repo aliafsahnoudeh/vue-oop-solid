@@ -4,11 +4,12 @@ import IServices from "../services/IServices";
 import CompanyModel from "../types/CompanyModel";
 import ILogicalComponents from "./ILogicalComponents";
 import IProcessRawDataService from "./IProcessRawDataService";
+import useStore from "../store"
 
 export default function useCompanies() {
     let isMounted = false;
     const loading = ref(false);
-    const companies = ref<CompanyModel[] | undefined>([]);
+    const store = useStore();
     const services = inject<IServices| undefined>('services');
     let companyService: ICompanyService
     if(services !== undefined)
@@ -18,20 +19,20 @@ export default function useCompanies() {
     let processRawDataService: IProcessRawDataService
     if(logicalComponents !== undefined)
         processRawDataService = logicalComponents.processRawDataService
+        
     const fetchCompanies = async (isMounted: boolean) => {
         try {
           loading.value = true
-          companies.value = await processRawDataService?.process(await companyService?.fetch())
+          store.setCompanies(await processRawDataService?.process(await companyService?.fetch()))
         } catch (error) {
             console.error(error)
-            companies.value = []
+            store.setCompanies([])
         } finally {
           if (isMounted) { loading.value = false; }
         }
     };
 
       onMounted(() => {
-          console.log("onMounted")
         isMounted = true;
         fetchCompanies(isMounted);
       });
@@ -40,5 +41,5 @@ export default function useCompanies() {
         isMounted = false;
       });
 
-    return { loading, companies };
+    return { loading };
 }

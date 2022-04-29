@@ -19,6 +19,7 @@ class CompanyService implements ICompanyService {
       {},
       {},
     );
+    console.log(body)
     return body;
   }
 }
