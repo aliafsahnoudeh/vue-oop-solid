@@ -1,16 +1,63 @@
-# Vue 3 + TypeScript + Vite
+## What is the purpose of this project?
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+It's just a sample application to show how to leverage advanced [object oriented programming](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming), SOLID, compositions and component based design along Vue.js best practices to gain cleaner code structure, more maintainable and reusable code base also better code coherence.
 
-## Recommended IDE Setup
+## What does this application do?
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+Our web application fetches a list of music bands. Each band has a list of time slots to choose. We have a concert hall which can host only one band at a time, so by selecting a time slot for a specific band, other band's time slots which overlap that time will be disabled. Also each band can perform once, so by selecting a time slot of a specific band, all of the other time slots of that band are going to be disabled.
 
-## Type Support For `.vue` Imports in TS
+## A summary of what I did and why, in case you were interested:
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+For diving deeper into this topic and get more details please have look at this.
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+But as a summary I can mention these:
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+- I imagined this application is bigger than it is and tried to implement some concepts suited for that scale.
+
+- Basically I tried to design an architecture into 3 main layers. Somehow similar to MVP or MVVM.
+
+1. UI/Presentation layer: (pages and components) are placed in /views and /components. Also I tried to respect the [separated presentation principle](https://martinfowler.com/eaaDev/SeparatedPresentation.html) and just keep the UI logic there.
+
+2. Logic/Business layer: Logical components are in /services and /logical-components. With this approach I tried to separate service logic including API calls or maybe in future working with vendors and third-parties from application logic. These two groups have access to each other loosely and via interfaces. Also they don't have a tight coupling to the UI layer.
+
+3. Model/State layer: For keeping models/types and global state of the application.
+
+- Also I tried to make a balance between Object Oriented Programming and semi-functional programming paradigms.
+
+- Presentation layer has access to the business layer via an abstraction of interfaces. Except for the custom hooks, it was possible to create an abstraction for them as well but I thought it would be over engineering!
+
+- I've implemented dependency injection with IOC container and constructor injection and used provide/inject API to inject them to the presentation layer. Both logical-components and services have their own IOC container and context. Maybe even using the context is not necessary since the IOC container can do the injecting as well! Probably it's a good idea when we are separating our application in isolated modules. But still I just kept them to show the usage!
+
+- I could keep the state in the parent component but just used a state management piece to show the usage. I've chosen [pinia](https://github.com/vuejs/pinia) for its simplicity and the fact that it's recommended for Vue 3. It was possible to separate companies and time-slots or even groups inside the state but again I guessed the data is not going to be huge so I tried to keep it simple.
+
+## TODO
+
+- The app definitely should have a lot more unit tests. We can have a couple of E2E tests as well.
+
+- I tried to use a combination of global and scoped styling with SCSS. It could be implemented much nicer with more nesting and the usage of mixins. Also there are some components just for making a consistent and reusable styling for components, like Layout.tsx or CardLayout.tsx.
+
+## Running the web client
+
+Please run:
+
+```
+yarn
+```
+
+And then
+
+```
+yarn dev
+```
+
+Application will start on port 3000
+
+## Running the server
+
+Please run
+
+```
+yarn server:start
+```
+
+A server will start listening on port 4000
