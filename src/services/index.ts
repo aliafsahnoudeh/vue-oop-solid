@@ -1,6 +1,7 @@
 import IocContainer from '../IocContainer';
 import ApiService from './ApiService';
 import CompanyService from './CompanyService';
+import CompanyServicePathsInterface from './CompanyServicePaths.interface';
 
 const iocContainer = new IocContainer();
 
@@ -10,8 +11,20 @@ iocContainer.service(
 );
 
 iocContainer.service(
+  'CompanyServicePaths',
+  (c:any) => {
+    return {
+      fetch: {
+        Method: 'GET',
+        Path: "/companies"
+      }
+    } as CompanyServicePathsInterface
+  } 
+);
+
+iocContainer.service(
   'CompanyService',
-  (c:any) => new CompanyService(c.ApiService),
+  (c:any) => new CompanyService(c.ApiService, c.CompanyServicePaths),
 );
 
 
