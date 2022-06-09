@@ -4,4 +4,4 @@ type IServices = {
   bandService: IBandService
 };
 
-  export default IServices
+export default IServices

@@ -1,4 +1,4 @@
-import ConstructableInterface from "../services/Constructable.interface";
+import ConstructableInterface from "./Constructable.interface";
 import BookingService from "./BookingService";
 import IProcessRawDataService from "./IProcessRawDataService";
 
