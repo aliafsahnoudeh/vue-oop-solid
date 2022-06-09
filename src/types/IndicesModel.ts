@@ -1,5 +1,5 @@
 type IndicesModel = {
-  company: number;
+  band: number;
   group?: number;
   timeSlot?: number;
 };

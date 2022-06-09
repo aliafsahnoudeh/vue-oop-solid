@@ -6,11 +6,11 @@ import IndicesModel from '../types/IndicesModel';
 import ILogicalComponents from "./ILogicalComponents";
 
 function useBooking() {
-  const { companies, updateTimeSlots, updateSelected } = useStore();
+  const { bands, updateTimeSlots, updateSelected } = useStore();
   const logicalComponents = inject<ILogicalComponents| undefined>('logical-components');
     let bookingService: IBookingService
     if(logicalComponents !== undefined)
-    bookingService = new logicalComponents.BookingService(companies);
+    bookingService = new logicalComponents.BookingService(bands);
 
   const handleTimeSlotClick = (indices: IndicesModel | undefined): void => {
     // TODO some error handling
@@ -20,7 +20,7 @@ function useBooking() {
       selected: undefined,
     };
     if (indices.group !== undefined && indices.timeSlot !== undefined) {
-      const current = companies[indices.company].groups[indices.group].timeSlots[indices.timeSlot];
+      const current = bands[indices.band].groups[indices.group].timeSlots[indices.timeSlot];
       if (current.selected) result = bookingService.remove(indices);
       else if (!current.disabled) result = bookingService.book(indices);
     }

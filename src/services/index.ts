@@ -1,7 +1,7 @@
 import IocContainer from '../IocContainer';
 import ApiService from './ApiService';
-import CompanyService from './CompanyService';
-import CompanyServicePathsInterface from './CompanyServicePaths.interface';
+import BandService from './BandService';
+import BandServicePathsInterface from './BandServicePaths.interface';
 
 const iocContainer = new IocContainer();
 
@@ -11,25 +11,25 @@ iocContainer.service(
 );
 
 iocContainer.service(
-  'CompanyServicePaths',
+  'BandServicePaths',
   (c:any) => {
     return {
       fetch: {
         Method: 'GET',
-        Path: "/companies"
+        Path: "/bands"
       }
-    } as CompanyServicePathsInterface
+    } as BandServicePathsInterface
   } 
 );
 
 iocContainer.service(
-  'CompanyService',
-  (c:any) => new CompanyService(c.ApiService, c.CompanyServicePaths),
+  'BandService',
+  (c:any) => new BandService(c.ApiService, c.BandServicePaths),
 );
 
 
 export const container = iocContainer;
 
 export default {
-  companyService: iocContainer.get('CompanyService'),
+  bandService: iocContainer.get('BandService'),
 }

@@ -4,7 +4,7 @@ import GroupModel from "../types/GroupModel";
 
 defineProps<{
   groups: GroupModel[];
-  companyIndex: number;
+  bandIndex: number;
 }>()
 
 </script>
@@ -16,7 +16,7 @@ defineProps<{
         :group="group"
         :key="group.dayLabel"
         :indices="{
-          company: companyIndex,
+          band: bandIndex,
           group: index,
         }"
       />

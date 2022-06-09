@@ -7,7 +7,7 @@ import GroupModel from "../types/GroupModel";
 defineProps<{
  group: GroupModel;
   indices: {
-    company: number,
+    band: number,
     group: number,
   }
 }>()
@@ -22,7 +22,7 @@ defineProps<{
         :timeSlot="ts"
         :key="ts.startTimestamp"
         :indices="{
-          company: indices.company,
+          band: indices.band,
           group: indices.group,
           timeSlot: index,
         }"

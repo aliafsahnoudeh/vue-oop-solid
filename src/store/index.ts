@@ -1,31 +1,31 @@
 import { defineStore } from 'pinia'
 
 
-import CompanyModel from '../types/CompanyModel';
+import BandModel from '../types/BandModel';
 import TimeSlotUpdateModel from '../types/TimeSlotUpdateModel';
 import SelectedTimeSlotModel from '../types/SelectedTimeSlotModel';
 
 const useStore = defineStore('store', {
   state: () => {
-    return { companies: [] as CompanyModel[] }
+    return { bands: [] as BandModel[] }
   },
   actions: {
-    setCompanies(companies: CompanyModel[]) {
-      this.companies = companies
+    setBands(bands: BandModel[]) {
+      this.bands = bands
     },
     updateTimeSlots(updates: TimeSlotUpdateModel[]) {
       for (let i = 0; i < updates.length; i += 1) {
         const { indices, disabled, selected } = updates[i];
         if (indices.group !== undefined && indices.timeSlot !== undefined) {
-          const item = this.companies[indices.company].groups[indices.group].timeSlots[indices.timeSlot];
+          const item = this.bands[indices.band].groups[indices.group].timeSlots[indices.timeSlot];
           item.disabled = disabled;
           item.selected = selected;
         }
       }
     },
     updateSelected(selected: SelectedTimeSlotModel){
-      const company = this.companies[selected.companyIndex];
-      company.selectedTimeSlot = selected.selected;
+      const band = this.bands[selected.bandIndex];
+      band.selectedTimeSlot = selected.selected;
     },
   }
 });

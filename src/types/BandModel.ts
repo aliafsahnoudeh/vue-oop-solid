@@ -1,7 +1,7 @@
 import GroupModel from './GroupModel';
 import TimeSlotModel from './TimeSlotModel';
 
-type CompanyModel = {
+type BandModel = {
   id: number;
   name: string;
   type: string;
@@ -9,4 +9,4 @@ type CompanyModel = {
   selectedTimeSlot: TimeSlotModel | undefined;
 };
 
-export default CompanyModel;
+export default BandModel;

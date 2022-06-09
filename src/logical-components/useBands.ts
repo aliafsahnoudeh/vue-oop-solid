@@ -1,32 +1,32 @@
 import { ref, inject,onMounted, onUnmounted } from "vue";
-import ICompanyService from "../services/ICompanyService";
+import IBandService from "../services/IBandService";
 import IServices from "../services/IServices";
-import CompanyModel from "../types/CompanyModel";
+import BandModel from "../types/BandModel";
 import ILogicalComponents from "./ILogicalComponents";
 import IProcessRawDataService from "./IProcessRawDataService";
 import useStore from "../store"
 
-export default function useCompanies() {
+export default function useBands() {
     let isMounted = false;
     const loading = ref(false);
     const store = useStore();
     const services = inject<IServices| undefined>('services');
-    let companyService: ICompanyService
+    let bandService: IBandService
     if(services !== undefined)
-        companyService = services.companyService
+      bandService = services.bandService
 
     const logicalComponents = inject<ILogicalComponents| undefined>('logical-components');
     let processRawDataService: IProcessRawDataService
     if(logicalComponents !== undefined)
         processRawDataService = logicalComponents.processRawDataService
         
-    const fetchCompanies = async (isMounted: boolean) => {
+    const fetchBands = async (isMounted: boolean) => {
         try {
           loading.value = true
-          store.setCompanies(await processRawDataService?.process(await companyService?.fetch()))
+          store.setBands(await processRawDataService?.process(await bandService?.fetch()))
         } catch (error) {
             console.error(error)
-            store.setCompanies([])
+            store.setBands([])
         } finally {
           if (isMounted) { loading.value = false; }
         }
@@ -34,7 +34,7 @@ export default function useCompanies() {
 
       onMounted(() => {
         isMounted = true;
-        fetchCompanies(isMounted);
+        fetchBands(isMounted);
       });
 
       onUnmounted(() => {

@@ -1,7 +1,7 @@
 import TimeSlotModel from './TimeSlotModel';
 
 type SelectedTimeSlotModel = {
-  companyIndex: number;
+  bandIndex: number;
   selected: TimeSlotModel | undefined;
 };
 

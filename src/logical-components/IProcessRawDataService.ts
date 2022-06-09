@@ -1,8 +1,8 @@
-import RawCompanyModel from '../types/RawCompanyModel';
-import CompanyModel from '../types/CompanyModel';
+import RawBandModel from '../types/RawBandModel';
+import BandModel from '../types/BandModel';
 
 interface IProcessRawDataService {
-  process(rawCompanies: RawCompanyModel[]): CompanyModel[]
+  process(rawbands: RawBandModel[]): BandModel[]
 }
 
 export default IProcessRawDataService;

@@ -1,6 +1,6 @@
-import CompanyModel from '../types/CompanyModel';
+import BandModel from '../types/BandModel';
 import GroupModel from '../types/GroupModel';
-import RawCompanyModel from '../types/RawCompanyModel';
+import RawBandModel from '../types/RawBandModel';
 import TimeSlotModel from '../types/TimeSlotModel';
 import RawTimeSlotModel from '../types/RawTimeSlotModel';
 import IProcessRawDataService from './IProcessRawDataService';
@@ -18,36 +18,36 @@ class ProcessRawDataService implements IProcessRawDataService {
     this.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   }
 
-  public process(rawCompanies: RawCompanyModel[]): CompanyModel[] {
-    return rawCompanies.map((rawCompany: RawCompanyModel):CompanyModel => {
-      const newCompany = {
-        id: rawCompany.id,
-        name: rawCompany.name,
-        type: rawCompany.type,
+  public process(rawBands: RawBandModel[]): BandModel[] {
+    return rawBands.map((rawBand: RawBandModel):BandModel => {
+      const newBand = {
+        id: rawBand.id,
+        name: rawBand.name,
+        type: rawBand.type,
         selectedTimeSlot: undefined,
         groups: [] as GroupModel[],
-      } as CompanyModel;
+      } as BandModel;
 
       // TODO merge these two iterations. converting and adding to a group can be in the same place
-      const newTimeSlots = this.convertTimeSlot(rawCompany.time_slots);
+      const newTimeSlots = this.convertTimeSlot(rawBand.time_slots);
       if (newTimeSlots.length > 0) {
         let index = -1;
         for (let i = 0; i < newTimeSlots.length; i += 1) {
           const startOfTheDay = new Date(newTimeSlots[i].year, newTimeSlots[i].month, newTimeSlots[i].day);
-          if (index === -1 || newCompany.groups[index].date.toISOString() !== startOfTheDay.toISOString()) {
+          if (index === -1 || newBand.groups[index].date.toISOString() !== startOfTheDay.toISOString()) {
             const newGroup = {
               dayLabel: `${this.months[startOfTheDay.getMonth()]} ${startOfTheDay.getDate()} ${this.days[startOfTheDay.getDay()]}`,
               date: startOfTheDay,
               timeSlots: [newTimeSlots[i]],
             } as GroupModel;
-            newCompany.groups.push(newGroup);
+            newBand.groups.push(newGroup);
             index += 1;
           } else {
-            newCompany.groups[index].timeSlots.push(newTimeSlots[i]);
+            newBand.groups[index].timeSlots.push(newTimeSlots[i]);
           }
         }
       }
-      return newCompany;
+      return newBand;
     });
   }
 

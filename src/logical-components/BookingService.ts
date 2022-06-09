@@ -1,17 +1,17 @@
 // It just does the calculation and doesn't keep any state. We just pass the current state to it and it will use it for calculations and then just returns the result
 import IBookingService from './IBookingService';
 
-import CompanyModel from '../types/CompanyModel';
+import BandModel from '../types/BandModel';
 import IndicesModel from '../types/IndicesModel';
 import TimeSlotUpdateModel from '../types/TimeSlotUpdateModel';
 import BookingModel from '../types/BookingModel';
 import TimeSlotModel from '../types/TimeSlotModel';
 
 class BookingService implements IBookingService {
-  companies: CompanyModel[];
+  bands: BandModel[];
 
-  constructor(companies: CompanyModel[]) {
-    this.companies = companies;
+  constructor(bands: BandModel[]) {
+    this.bands = bands;
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -29,11 +29,11 @@ class BookingService implements IBookingService {
 
   hasOverlapWithAnySelected(indices: IndicesModel, ignoreIndex: number):boolean {
     if (indices.group !== undefined && indices.timeSlot !== undefined) {
-      const timeSlot: TimeSlotModel = this.companies[indices.company].groups[indices.group].timeSlots[indices.timeSlot];
-      for (let i = 0; i < this.companies.length; i += 1) {
+      const timeSlot: TimeSlotModel = this.bands[indices.band].groups[indices.group].timeSlots[indices.timeSlot];
+      for (let i = 0; i < this.bands.length; i += 1) {
         if (i !== ignoreIndex) {
-          if (this.companies[i].selectedTimeSlot !== undefined && (indices.company === i
-            || this.hasOverlap(this.companies[i].selectedTimeSlot, timeSlot))) {
+          if (this.bands[i].selectedTimeSlot !== undefined && (indices.band === i
+            || this.hasOverlap(this.bands[i].selectedTimeSlot, timeSlot))) {
             return true;
           }
         }
@@ -57,18 +57,18 @@ class BookingService implements IBookingService {
       };
     }
 
-    const groupDate = this.companies[indices.company].groups[indices.group].date.toISOString();
-    for (let i = 0; i < this.companies.length; i += 1) {
-      const { groups } = this.companies[i];
+    const groupDate = this.bands[indices.band].groups[indices.group].date.toISOString();
+    for (let i = 0; i < this.bands.length; i += 1) {
+      const { groups } = this.bands[i];
       for (let k = 0; k < groups.length; k += 1) {
-        if (i === indices.company || groups[k].date.toISOString() === groupDate) {
+        if (i === indices.band || groups[k].date.toISOString() === groupDate) {
           for (let j = 0; j < groups[k].timeSlots.length; j += 1) {
-            if (!(i === indices.company && k === indices.group && j === indices.timeSlot)) {
-              if (i === indices.company
-            || this.hasOverlap(groups[k].timeSlots[j], this.companies[indices.company].groups[indices.group].timeSlots[indices.timeSlot])) {
+            if (!(i === indices.band && k === indices.group && j === indices.timeSlot)) {
+              if (i === indices.band
+            || this.hasOverlap(groups[k].timeSlots[j], this.bands[indices.band].groups[indices.group].timeSlots[indices.timeSlot])) {
                 updates.push({
                   indices: {
-                    company: i,
+                    band: i,
                     group: k,
                     timeSlot: j,
                   },
@@ -82,14 +82,14 @@ class BookingService implements IBookingService {
       }
     }
 
-    const selected = JSON.parse(JSON.stringify(this.companies[indices.company].groups[indices.group].timeSlots[indices.timeSlot]));
-    selected.label = this.companies[indices.company].groups[indices.group].dayLabel;
+    const selected = JSON.parse(JSON.stringify(this.bands[indices.band].groups[indices.group].timeSlots[indices.timeSlot]));
+    selected.label = this.bands[indices.band].groups[indices.group].dayLabel;
 
     return {
       updates,
       selected: {
         selected,
-        companyIndex: indices.company,
+        bandIndex: indices.band,
       },
     };
   }
@@ -108,14 +108,14 @@ class BookingService implements IBookingService {
       };
     }
 
-    for (let i = 0; i < this.companies.length; i += 1) {
-      const { groups } = this.companies[i];
+    for (let i = 0; i < this.bands.length; i += 1) {
+      const { groups } = this.bands[i];
       for (let k = 0; k < groups.length; k += 1) {
         for (let j = 0; j < groups[k].timeSlots.length; j += 1) {
-          if (!this.hasOverlapWithAnySelected({ company: i, group: k, timeSlot: j }, indices.company)) {
+          if (!this.hasOverlapWithAnySelected({ band: i, group: k, timeSlot: j }, indices.band)) {
             updates.push({
               indices: {
-                company: i,
+                band: i,
                 group: k,
                 timeSlot: j,
               },
@@ -131,7 +131,7 @@ class BookingService implements IBookingService {
       updates,
       selected: {
         selected: undefined,
-        companyIndex: indices.company,
+        bandIndex: indices.band,
       },
     };
   }

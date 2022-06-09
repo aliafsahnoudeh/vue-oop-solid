@@ -1,7 +1,7 @@
-import ICompanyService from "./ICompanyService";
+import IBandService from "./IBandService";
 
 type IServices = {
-    companyService: ICompanyService
-  };
+  bandService: IBandService
+};
 
   export default IServices

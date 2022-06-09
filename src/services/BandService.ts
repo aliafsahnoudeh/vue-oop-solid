@@ -1,19 +1,19 @@
 import IApiService from './IApiService';
-import ICompanyService from './ICompanyService';
+import IBandService from './IBandService';
 
-import RawCompanyModel from '../types/RawCompanyModel';
-import CompanyServicePathsInterface from './CompanyServicePaths.interface';
+import RawBandModel from '../types/RawBandModel';
+import BandServicePathsInterface from './BandServicePaths.interface';
 
-class BandService implements ICompanyService {
+class BandService implements IBandService {
   private readonly apiService: IApiService;
-  private readonly paths: CompanyServicePathsInterface;
+  private readonly paths: BandServicePathsInterface;
 
-  constructor(apiService: IApiService, companyServicePathsInterface: CompanyServicePathsInterface) {
+  constructor(apiService: IApiService, bandServicePathsInterface: BandServicePathsInterface) {
     this.apiService = apiService;
-    this.paths = companyServicePathsInterface
+    this.paths = bandServicePathsInterface
   }
 
-  public async fetch(): Promise<Array<RawCompanyModel>> {
+  public async fetch(): Promise<Array<RawBandModel>> {
     const {
       body,
     } = await this.apiService.request(
@@ -26,4 +26,4 @@ class BandService implements ICompanyService {
   }
 }
 
-export default CompanyService;
+export default BandService;

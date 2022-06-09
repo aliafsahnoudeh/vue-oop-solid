@@ -1,7 +1,7 @@
 import ApiRequestPathInterface from "../types/ApiRequestPath.interface";
 
-interface CompanyServicePathsInterface {
+interface BandServicePathsInterface {
   fetch : ApiRequestPathInterface;
 }
 
-export default CompanyServicePathsInterface;
+export default BandServicePathsInterface;

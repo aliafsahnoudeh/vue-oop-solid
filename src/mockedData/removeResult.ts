@@ -2,7 +2,7 @@ export default {
   updates: [
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 0,
       },
@@ -11,7 +11,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 0,
       },
@@ -20,7 +20,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 1,
       },
@@ -29,7 +29,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 2,
       },
@@ -38,7 +38,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 3,
       },
@@ -47,7 +47,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 4,
       },
@@ -56,7 +56,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 5,
       },
@@ -65,7 +65,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 6,
       },
@@ -74,7 +74,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 7,
       },
@@ -83,7 +83,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 8,
       },
@@ -92,7 +92,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 0,
         timeSlot: 9,
       },
@@ -101,7 +101,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 0,
       },
@@ -110,7 +110,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 1,
       },
@@ -119,7 +119,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 2,
       },
@@ -128,7 +128,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 3,
       },
@@ -137,7 +137,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 4,
       },
@@ -146,7 +146,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 5,
       },
@@ -155,7 +155,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 6,
       },
@@ -164,7 +164,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 7,
       },
@@ -173,7 +173,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 8,
       },
@@ -182,7 +182,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 9,
       },
@@ -191,7 +191,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 10,
       },
@@ -200,7 +200,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 11,
       },
@@ -209,7 +209,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 12,
       },
@@ -218,7 +218,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 1,
         timeSlot: 13,
       },
@@ -227,7 +227,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 2,
         timeSlot: 0,
       },
@@ -236,7 +236,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 2,
         timeSlot: 1,
       },
@@ -245,7 +245,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 2,
         timeSlot: 2,
       },
@@ -254,7 +254,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 2,
         timeSlot: 3,
       },
@@ -263,7 +263,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 2,
         timeSlot: 4,
       },
@@ -272,7 +272,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 2,
         timeSlot: 5,
       },
@@ -281,7 +281,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 2,
         timeSlot: 6,
       },
@@ -290,7 +290,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 2,
         timeSlot: 7,
       },
@@ -299,7 +299,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 3,
         timeSlot: 0,
       },
@@ -308,7 +308,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 3,
         timeSlot: 1,
       },
@@ -317,7 +317,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 3,
         timeSlot: 2,
       },
@@ -326,7 +326,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 3,
         timeSlot: 3,
       },
@@ -335,7 +335,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 3,
         timeSlot: 4,
       },
@@ -344,7 +344,7 @@ export default {
     },
     {
       indices: {
-        company: 0,
+        band: 0,
         group: 3,
         timeSlot: 5,
       },
@@ -353,7 +353,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 0,
         timeSlot: 0,
       },
@@ -362,7 +362,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 0,
         timeSlot: 1,
       },
@@ -371,7 +371,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 0,
         timeSlot: 2,
       },
@@ -380,7 +380,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 0,
         timeSlot: 3,
       },
@@ -389,7 +389,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 0,
         timeSlot: 4,
       },
@@ -398,7 +398,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 0,
         timeSlot: 5,
       },
@@ -407,7 +407,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 0,
         timeSlot: 6,
       },
@@ -416,7 +416,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 0,
         timeSlot: 7,
       },
@@ -425,7 +425,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 0,
         timeSlot: 8,
       },
@@ -434,7 +434,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 0,
         timeSlot: 9,
       },
@@ -443,7 +443,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 0,
       },
@@ -452,7 +452,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 1,
       },
@@ -461,7 +461,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 2,
       },
@@ -470,7 +470,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 3,
       },
@@ -479,7 +479,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 4,
       },
@@ -488,7 +488,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 5,
       },
@@ -497,7 +497,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 6,
       },
@@ -506,7 +506,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 7,
       },
@@ -515,7 +515,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 8,
       },
@@ -524,7 +524,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 9,
       },
@@ -533,7 +533,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 10,
       },
@@ -542,7 +542,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 11,
       },
@@ -551,7 +551,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 12,
       },
@@ -560,7 +560,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 1,
         timeSlot: 13,
       },
@@ -569,7 +569,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 2,
         timeSlot: 0,
       },
@@ -578,7 +578,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 2,
         timeSlot: 1,
       },
@@ -587,7 +587,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 2,
         timeSlot: 2,
       },
@@ -596,7 +596,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 2,
         timeSlot: 3,
       },
@@ -605,7 +605,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 2,
         timeSlot: 4,
       },
@@ -614,7 +614,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 2,
         timeSlot: 5,
       },
@@ -623,7 +623,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 2,
         timeSlot: 6,
       },
@@ -632,7 +632,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 2,
         timeSlot: 7,
       },
@@ -641,7 +641,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 3,
         timeSlot: 0,
       },
@@ -650,7 +650,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 3,
         timeSlot: 1,
       },
@@ -659,7 +659,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 3,
         timeSlot: 2,
       },
@@ -668,7 +668,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 3,
         timeSlot: 3,
       },
@@ -677,7 +677,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 3,
         timeSlot: 4,
       },
@@ -686,7 +686,7 @@ export default {
     },
     {
       indices: {
-        company: 1,
+        band: 1,
         group: 3,
         timeSlot: 5,
       },
@@ -695,7 +695,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 0,
         timeSlot: 0,
       },
@@ -704,7 +704,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 0,
         timeSlot: 1,
       },
@@ -713,7 +713,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 0,
         timeSlot: 2,
       },
@@ -722,7 +722,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 0,
         timeSlot: 3,
       },
@@ -731,7 +731,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 0,
         timeSlot: 4,
       },
@@ -740,7 +740,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 0,
         timeSlot: 5,
       },
@@ -749,7 +749,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 0,
         timeSlot: 6,
       },
@@ -758,7 +758,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 0,
         timeSlot: 7,
       },
@@ -767,7 +767,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 0,
         timeSlot: 8,
       },
@@ -776,7 +776,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 0,
         timeSlot: 9,
       },
@@ -785,7 +785,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 0,
       },
@@ -794,7 +794,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 1,
       },
@@ -803,7 +803,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 2,
       },
@@ -812,7 +812,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 3,
       },
@@ -821,7 +821,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 4,
       },
@@ -830,7 +830,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 5,
       },
@@ -839,7 +839,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 6,
       },
@@ -848,7 +848,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 7,
       },
@@ -857,7 +857,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 8,
       },
@@ -866,7 +866,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 9,
       },
@@ -875,7 +875,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 10,
       },
@@ -884,7 +884,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 11,
       },
@@ -893,7 +893,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 12,
       },
@@ -902,7 +902,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 1,
         timeSlot: 13,
       },
@@ -911,7 +911,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 2,
         timeSlot: 0,
       },
@@ -920,7 +920,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 2,
         timeSlot: 1,
       },
@@ -929,7 +929,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 2,
         timeSlot: 2,
       },
@@ -938,7 +938,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 2,
         timeSlot: 3,
       },
@@ -947,7 +947,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 2,
         timeSlot: 4,
       },
@@ -956,7 +956,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 2,
         timeSlot: 5,
       },
@@ -965,7 +965,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 2,
         timeSlot: 6,
       },
@@ -974,7 +974,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 2,
         timeSlot: 7,
       },
@@ -983,7 +983,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 3,
         timeSlot: 0,
       },
@@ -992,7 +992,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 3,
         timeSlot: 1,
       },
@@ -1001,7 +1001,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 3,
         timeSlot: 2,
       },
@@ -1010,7 +1010,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 3,
         timeSlot: 3,
       },
@@ -1019,7 +1019,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 3,
         timeSlot: 4,
       },
@@ -1028,7 +1028,7 @@ export default {
     },
     {
       indices: {
-        company: 2,
+        band: 2,
         group: 3,
         timeSlot: 5,
       },
@@ -1038,6 +1038,6 @@ export default {
   ],
   selected: {
     selected: undefined,
-    companyIndex: 0,
+    bandIndex: 0,
   },
 };

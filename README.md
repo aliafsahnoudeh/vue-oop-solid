@@ -34,7 +34,7 @@ But as a summary I can mention these:
 
 - I've implemented dependency injection with IOC container and constructor injection and used provide/inject API to inject them to the presentation layer. Both logical-components and services have their own IOC container and context. Maybe even using the context is not necessary since the IOC container can do the injecting as well! Probably it's a good idea when we are separating our application in isolated modules. But still I just kept them to show the usage!
 
-- I could keep the state in the parent component but just used a state management piece to show the usage. I've chosen [pinia](https://github.com/vuejs/pinia) for its simplicity and the fact that it's recommended for Vue 3. It was possible to separate companies and time-slots or even groups inside the state but again I guessed the data is not going to be huge so I tried to keep it simple.
+- I could keep the state in the parent component but just used a state management piece to show the usage. I've chosen [pinia](https://github.com/vuejs/pinia) for its simplicity and the fact that it's recommended for Vue 3. It was possible to separate bands and time-slots or even groups inside the state but again I guessed the data is not going to be huge so I tried to keep it simple.
 
 ## TODO
 

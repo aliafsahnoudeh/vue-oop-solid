@@ -5,8 +5,8 @@ defineProps<{ name: string }>();
 </script>
 
 <template>
-  <div className="title company-label">
-      <span className="company-label-text">
+  <div className="title band-label">
+      <span className="band-label-text">
         {{ name }}
       </span>
     </div>

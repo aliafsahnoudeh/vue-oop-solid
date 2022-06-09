@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: "Pink Floyd",
-    type: "company",
+    type: "band",
     time_slots: [
       {
         start_time: "2018-07-09T08:00:00.000+02:00",
@@ -161,7 +161,7 @@ export default [
   {
     id: 2,
     name: "Led Zeppelin",
-    type: "company",
+    type: "band",
     time_slots: [
       {
         start_time: "2018-07-09T08:00:00.000+02:00",
@@ -320,7 +320,7 @@ export default [
   {
     id: 3,
     name: "Jimi Hendrix",
-    type: "company",
+    type: "band",
     time_slots: [
       {
         start_time: "2018-07-09T08:00:00.000+02:00",

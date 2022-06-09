@@ -1,10 +1,10 @@
-import CompanyModel from "../types/CompanyModel";
+import BandModel from "../types/BandModel";
 
-const companies: CompanyModel[] = [
+const bands: BandModel[] = [
   {
     id: 1,
     name: "Pink Floyd",
-    type: "company",
+    type: "band",
     selectedTimeSlot: undefined,
     groups: [
       {
@@ -530,7 +530,7 @@ const companies: CompanyModel[] = [
   {
     id: 2,
     name: "Led Zeppelin",
-    type: "company",
+    type: "band",
     selectedTimeSlot: undefined,
     groups: [
       {
@@ -1056,7 +1056,7 @@ const companies: CompanyModel[] = [
   {
     id: 3,
     name: "Jimi Hendrix",
-    type: "company",
+    type: "band",
     selectedTimeSlot: undefined,
     groups: [
       {
@@ -1581,4 +1581,4 @@ const companies: CompanyModel[] = [
   },
 ];
 
-export default companies;
+export default bands;
