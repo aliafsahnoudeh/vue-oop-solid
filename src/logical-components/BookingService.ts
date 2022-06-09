@@ -7,6 +7,7 @@ import TimeSlotUpdateModel from '../types/TimeSlotUpdateModel';
 import BookingModel from '../types/BookingModel';
 import TimeSlotModel from '../types/TimeSlotModel';
 
+
 class BookingService implements IBookingService {
   bands: BandModel[];
 

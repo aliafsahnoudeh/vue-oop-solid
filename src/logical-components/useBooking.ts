@@ -10,7 +10,7 @@ function useBooking() {
   const logicalComponents = inject<ILogicalComponents| undefined>('logical-components');
     let bookingService: IBookingService
     if(logicalComponents !== undefined)
-    bookingService = new logicalComponents.BookingService(bands);
+      bookingService = new logicalComponents.BookingService(bands);
 
   const handleTimeSlotClick = (indices: IndicesModel | undefined): void => {
     // TODO some error handling

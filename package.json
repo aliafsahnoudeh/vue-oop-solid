@@ -6,16 +6,24 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "server:start": "json-server --watch ./mock_server/time_slots.json --port 4000"
+    "server:start": "json-server --watch ./mock_server/time_slots.json --port 4000",
+    "test": "jest src"
   },
   "dependencies": {
     "pinia": "^2.0.13",
     "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@types/jest": "^28.1.1",
     "@vitejs/plugin-vue": "^2.3.1",
+    "@vue/test-utils": "^2.0.0-rc.18",
+    "@vue/vue3-jest": "^28.0.0",
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
     "json-server": "^0.17.0",
     "sass": "^1.50.0",
+    "ts-jest": "^28.0.4",
     "typescript": "^4.5.4",
     "vite": "^2.9.2",
     "vue-tsc": "^0.29.8"

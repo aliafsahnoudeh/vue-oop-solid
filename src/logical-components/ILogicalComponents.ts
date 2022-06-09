@@ -1,9 +1,10 @@
+import ConstructableInterface from "../services/Constructable.interface";
 import BookingService from "./BookingService";
 import IProcessRawDataService from "./IProcessRawDataService";
 
 type ILogicalComponents = {
-    BookingService: BookingService
-    processRawDataService: IProcessRawDataService
-  };
+  BookingService: ConstructableInterface<BookingService>
+  processRawDataService: IProcessRawDataService
+};
 
-  export default ILogicalComponents
+export default ILogicalComponents
