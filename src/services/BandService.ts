@@ -13,13 +13,13 @@ class BandService implements IBandService {
     this.paths = bandServicePathsInterface
   }
 
-  public async fetch(): Promise<Array<RawBandModel>> {
+  public async fetch(): Promise<RawBandModel[]> {
     const {
       body,
-    } = await this.apiService.request(
+    } = await this.apiService.request<{}, RawBandModel[]>(
       this.paths.fetch.Method,
       this.paths.fetch.Path,
-      {},
+      null,
       {},
     );
     return body;

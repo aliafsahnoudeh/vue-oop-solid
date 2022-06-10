@@ -7,12 +7,15 @@ class ApiService implements IApiService {
     this.baseUrl = baseUrl;
   }
 
-  public async request(
+  public async request<O, B>(
     method: string,
     url: string,
     query: any = null,
-    inputOptions: any = {},
-  ): Promise<any> {
+    inputOptions: O,
+  ): Promise<{
+    headers: Headers,
+    body: B
+  }> {
     const options = JSON.parse(JSON.stringify(inputOptions));
 
     if ('body' in options && options.body instanceof Object) {
