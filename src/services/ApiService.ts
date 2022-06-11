@@ -28,11 +28,12 @@ class ApiService implements IApiService {
 
     const search = query ? `?${new URLSearchParams(query).toString()}` : '';
 
-    const response = await fetch(`${this.baseUrl}${url}${search}`, {
+    const response = await window.fetch(`${this.baseUrl}${url}${search}`, {
       method,
       credentials: 'include',
       ...options,
     });
+
     if (response.ok) {
       const noContent = response.status === 201 || response.status === 204;
       return {
@@ -40,7 +41,7 @@ class ApiService implements IApiService {
         body: noContent ? undefined : await response.json(),
       };
     }
-    throw new Error();
+    throw new Error(response.statusText);
   }
 }
 
